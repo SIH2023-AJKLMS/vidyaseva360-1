@@ -343,8 +343,9 @@ overflow-y: auto;
     margin-top: 10px;
   }
   .contactMentor i{
-    display: flex;
-    justify-content: end;
+   float: right;
+   margin-right: 4px;
+   margin-top: 10px;
   }
   .contactMentor form .button{
     background-color: aqua;
