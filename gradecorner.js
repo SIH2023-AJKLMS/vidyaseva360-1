@@ -29,12 +29,12 @@ function displayMessage(form){
   function notifying(form){
     let name = document.getElementById("name").value;
     let time = document.getElementById("time").value;
-    document.getElementById("requesting").classList.add("remove");
+    document.getElementById("requesting").style.display = "none";
     document.getElementById("nameOfStudent").innerHTML = name;
     document.getElementById("timeSpecified").innerHTML = time;
     document.getElementById("notification").style.display="inline-block";
   }
-function withdrawing(){
+  function withdrawing(){
     document.getElementById("notification").style.display="none";
     document.getElementById("requesting").style.display = "block";
   }
