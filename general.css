@@ -136,15 +136,7 @@
         margin-top: 15px;
         margin-bottom: 15px;
     }
-    .navlist .sub{
-        margin-top: 0px;
-    }
-    .navlist2 .sub p{
-        font-size: 14px;
-        margin: 5px;
-        margin-left: 20px;
-        
-    }
+    
 
 }
 .navlist .links a, .navlist2 .links a , .navlist2 .sub p a{ color: white;}
