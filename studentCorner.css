@@ -3,7 +3,6 @@
     bottom: 0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, "Times New Roman", Times, sans-serif;
-    
     text-decoration: none;
   }
   body{
@@ -145,6 +144,9 @@
     margin-left: 30px;
     margin-right: 30px;
     list-style-type: disc;
+  }
+.updates li{
+    margin-left: 30px;
   }
 
   .progress{
@@ -477,9 +479,10 @@ i:hover{cursor: pointer;}
   margin-top: 10px;
 }
 .contactMentor i{
-  display: flex;
-  justify-content: end;
-}
+   float: right;
+   margin-right: 4px;
+   margin-top: 10px;
+  }
 .contactMentor form .button{
   background-color: aqua;
   border: none;
