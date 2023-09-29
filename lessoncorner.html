@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vidyaseva360.com</title>
+    <link rel="icon" type="image/jpg" href="vidyaseva360logo.jpeg"/>
+    <link rel="stylesheet" href="lessoncorner.css">
+    <link rel="stylesheet" href="general.css">
+    <script
+    src="https://kit.fontawesome.com/cf8841ba4a.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <p class="links" id="translation" onclick="googleTranslateElementInit()"></p>
+  <header class="head" id="head">
+    <div class="logo">
+    <figure>
+        <img src="vidyaseva360logo.jpeg">
+    </figure>
+    </div>
+    <div class="navlist">
+                <p class="bar" onclick="shownavlinks()"><i class="fa fa-bars" ></i></p>
+                <p class="clickednav">STUDENT CORNER</p>
+        <nav>        
+          <p class="links home"><a href="index.html#head"> HOME</a></p>
+          <p class="links studentcorner"><a href="studentCorner.html" >STUDENT CORNER</a></p>
+          <p class="links brainbuddy"><a href="" >BRAIN BUDDY</a></p>
+          <div class="main">
+          <p class="links financeaid"><a href=""> FINANCE AID</a></p>
+          <div class="sub">
+              <p ><a href="">SCHOLARSHIPS </a></p>
+              <p ><a href=""> LOANS</a></p>
+              <p ><a href=""> INCENTIVES</a></p>
+          </div>
+          </div>
+          <div class="main">
+          <p class="links jobhunt"><a href=""> JOB HUNT</a></p>
+          <div class="sub">
+              <p><a href=""> INTERNSHIPS</a></p>
+              <p><a href=""> JOBS</a></p>
+          </div>
+          </div>
+          <p class="links careercorner"><a href=""> CAREER CORNER</a></p>
+          <p class="links"><a download="" href=""> HELP</a> </p> 
+        </nav>
+    <div class="profile" >
+        <figure>
+            <img src="profile.jpg" onclick="profileDisplay()">
+        </figure>
+    </div>
+    </div>
+    
+</header>
+<div>
+
+<div class="navlist2" id="navlist2">
+  <p class="links home"><a href="index.html#head"> HOME</a></p>
+  <p class="links studentcorner"><a href="studentCorner.html" >STUDENT CORNER</a></p>
+  <p class="links brainbuddy"><a href="" >BRAIN BUDDY</a></p>
+  <div class="main">
+  <p class="links financeaid"><a href=""> FINANCE AID</a></p>
+  <div class="sub">
+      <p ><a href="">SCHOLARSHIPS </a></p>
+      <p ><a href=""> LOANS</a></p>
+      <p ><a href=""> INCENTIVES</a></p>
+  </div>
+  </div>
+  <div class="main">
+  <p class="links jobhunt"><a href=""> JOB HUNT</a></p>
+  <div class="sub">
+      <p><a href=""> INTERNSHIPS</a></p>
+      <p><a href=""> JOBS</a></p>
+  </div>
+  </div>
+  <p class="links careercorner"><a href=""> CAREER CORNER</a></p>
+  <p class="links"><a download="" href=""> HELP</a> </p> 
+ </div>     
+ <div class="profile-details">
+    <i class="fa-solid fa-xmark fa-2xl"  onclick="profileDisplay()"></i>
+    <figure>
+        <img src="profile.jpg">
+    </figure>
+    <p>@student_name</p>
+    <p>Qualification</p>
+    <p>ABC Public School</p>
+    <p class="starcontainer">Student Badge</p>
+    <p ><span class="star">&#10029;</span><span class="star">&#10029;</span><span class="star">&#10029;</span><span class="star">&#10029;</span><span class="star">&#10029;</span> </p>
+    <p class="refer">Refer to friends</p>
+    <p class="log-out">Logout</p>
+ </div>
+ </div>
+    <div class="full-container">
+        <div class="video-part">
+            <div class="video-caption">
+                <h2>Billu, The Dog</h2> 
+            </div>
+        <div class="video">
+        <video controls >
+            <source src="englishvideo.mp4" type="video/mp4"  >
+        </video>
+        <nav class="details" id="navDetails">
+          <p class="bars"><i class="fa fa-bars" onclick="navLinks()"></i></p>
+          <h4 id="navName">Doubts</h4>
+          <p onclick="doubtSection()" class="pLink" id="doubtSectionNav">Doubts</p>
+            <p onclick="teachersDetails()" class="pLink" id="teachersDetailsNav">Teacher's Detail</p>
+            <p onclick="feedbackSection()" class="pLink" id="feedbackSectionNav">Feedback</p>
+            <p class="pLink"><a href="english class 3 notes.pdf" download="english class 3 notes.pdf">Material <i class="fa-solid fa-download"></i
+              ></a> </p>
+              <p onclick="testSection()" class="pLink" id="testSectionNav">Take Test</p>
+        </nav>
+        <div class="teacher-details" id="teachersDetailsId">
+            <table>
+                <tr>
+                    <td>Teacher Name : </td>
+                    <td>Teacher_Name</td>
+                </tr>
+                <tr>
+                    <td>Working at :</td>
+                    <td>ABC Public School<br> XYZ road, Thiruvananthapuram, Kerala<br></td>
+                </tr>
+                <tr>
+                    <td>Experince :</td>
+                    <td>8years</td>
+                </tr>
+                <tr>
+                    <td>Video made(uploaded) on : </td>
+                    <td><time>13/09/2023 , 10:33AM</time></td>
+                </tr>
+            </table>
+        </div>
+        <div class="doubt" id="doubtSectionId">
+            <h2>Ask Your Doubt</h2>
+            <div class="doubts-part">
+              <div class="user-now users" id="user-now">
+                <div><i class="fa-solid fa-circle-user "   style="font-size: 30px;color:rgb(5, 109, 7)"></i></div>
+                <div><span>@your_name &#8226; just now</span>
+                <p id="doubt-input-taken"></p></div>
+            </div>
+            <div class="users">
+                <div><i class="fa-solid fa-circle-user "   style="font-size: 30px;color:rgb(242, 46, 46)"></i></div>
+                <div><span>@student_name1 &#8226; 3 days ago</span>
+                <p>Sir, Billu is really a god!! </p>
+                </div>
+            </div>
+            <div class="users">
+              <div><i class="fa-solid fa-circle-user "   style="font-size: 30px;color:rgb(46, 72, 242)"></i></div>
+              <div><span>@student_name21 &#8226; 2 days ago</span>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam tempore eos sequi, veniam iure sunt saepe impedit voluptatibus dolore suscipit at veritatis debitis commodi eligendi, quas corrupti quod doloremque quae.</p>
+              </div>
+          </div>
+            <div class="users">
+              <div><i class="fa-solid fa-circle-user "   style="font-size: 30px;color:rgb(242, 173, 46)"></i></div>
+              <div><span>@student_name42 &#8226; 5 days ago</span>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, tenetur?</p>
+              </div>
+          </div>
+          <div class="users">
+            <div><i class="fa-solid fa-circle-user "   style="font-size: 30px;color:rgb(252, 6, 162)"></i></div>
+            <div><span>@student_name101 &#8226; 15/09/2023</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ab consectetur voluptate voluptatibus cum maiores.</p>
+            </div>
+        </div>
+            
+          </div>
+            <form>
+                <input type="text" id="doubt-input">
+                <input type="button" value="submit" id="doubt-button" onclick="showDoubt(this.form)">
+            </form>
+        </div>
+        <div class="feedback"id="feedbackSectionId">
+            <form id="feedbackForm">
+              <div class="radio-input">
+            <label for="rate" class="heading">Rate the class</label><br>
+            <span class="radio-button"><input type="radio" id="excellent" name="rate" ><label for="excellent" class="radio-text">Excellent</label></span>
+            <span class="radio-button"><input type="radio" id="good" name="rate" ><label for="good" class="radio-text">Good</label></span>
+            <span class="radio-button"><input type="radio" id="bad" name="rate" ><label for="bad" class="radio-text">Bad</label></span>
+            </div>
+            <h2>Submit Your Feedback</h2>
+                <p id="feedback-text"></p>
+                    <textarea id="feedback-input" placeholder="Write your feedback (or suggestion if any) here"></textarea>
+                    <br/>
+                    <input type="button" value="submit" class="feedback-button" onclick="feedbackSubmit(this.form)">
+            </form> 
+            <div class="feedbackResult" id="feedbackResult">
+              <h2>Thank you for submitting the Feedback.</h2>
+              <h1>Happy Learning !!!</h1>
+            </div>   
+        </div>
+      </div>
+    </div>
+
+    <div class="lessons-part">
+      <a href="#">Lesson-1</a>
+      <a href="#">Lesson-2</a>
+      <a href="#">Lesson-3</a>
+      <a href="#">Lesson-4</a>
+      <a href="#">Lesson-5</a>
+      <a href="#">Lesson-6</a>
+      <a href="#">Lesson-7</a>
+      <a href="#">Lesson-8</a>
+      <a href="#">Lesson-9</a>
+      <a href="#">Lesson-10</a>
+      <a href="#">Take Exam</a>
+    </div>
+    </div>
+
+    <div class="mentor-caption" id="mentor-caption">
+        <p >Contact Mentor</p>
+      </div>
+      <div class="mentor" id="mentor" onmouseover="showCaption()" onmouseout="hideCaption()" onclick="mentor()">
+        <img src="contact.png" />
+      </div>
+      <div class="mentor-complete" id="mentor-compelete">
+        <div class="question" id="question">
+          <i class="fa-solid fa-circle-xmark fa-2xl" style="color: #fa5e03;" onclick="cancel()"></i>
+        <p>Do you want to </p>
+        <div>
+        <button onclick="chatWithMentor()">Chat with Mentor</button>
+        <button onclick="contactMentor()">Contact mentor</button>
+        </div>
+        </div>
+        <div class="chatWithMentor" id="chatWithMentor">
+          <div class="profile">
+           <i class="fa-solid fa-circle-user "   style="font-size: 40px;color:rgb(115, 115, 247)"></i>
+            <span>Mentor_Name <br>Last seen 1min ago</span>
+            <i class="fa-solid fa-circle-xmark fa-2xl" style="color: #fa5e03;" onclick="cancel()"></i>
+          </div>
+          <div class="display" id="display">
+            <div class="date"><span id="date"></span></div>
+            <p id="text"></p>
+          </div>
+          <form>
+          <input type="text" id="message" >
+          <input type="button" value="send" id="btn" onclick="displayMessage(this.form);">
+          </form>
+        </div>
+        <div class="contactMentor" id="contactMentor">
+          <i class="fa-solid fa-circle-xmark fa-2xl" style="color: #fa5e03;" onclick="cancel()"></i>
+          <h1>Request</h1>
+          <h4>your Mentor to call you soon</h4>
+          <form class="requesting" id="requesting">
+             <label for="name">Name:</label><br/>
+             <input type="text" id="name" placeholder="Enter your name" required>
+             <br/><br/>
+             <label for="reason">Reason for contacting:</label><br/>
+            <input type="text" id="reason" placeholder="Enter the reason" required>
+            <br/><br/>
+            <label for="time">When to call you:</label><br/>
+            <input type="text" id="time" placeholder="Enter time (9AM-10PM) " required>
+            <br/><br/>
+            <input type="button" value="Send Request" onclick="notifying(this.form)" class="button">
+  
+          </form>
+          <div class="notification" id="notification">
+           <p> <span id="nameOfStudent">YOu</span>, you will be called by your Mentor at <span id="timeSpecified">Specified time</span>.</p>
+           <h1>Happy Learning!!!</h1>
+           <form>
+            <input type="button" value="Withdraw Request" onclick="withdrawing()" class="button"/>
+           </form>
+          </div>
+        </div>
+      </div>
+
+      
+      <script src="lessoncorner.js">
+    </script>
+    <script src="general.js"></script>
+    
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

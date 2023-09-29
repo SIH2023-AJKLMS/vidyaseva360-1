@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, "Times New Roman", Times, sans-serif;
+}
+.head{
+    margin: 4px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.head .logo img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.head .profile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 4px;
+}
+.head .profile img:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.navlist{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navlist nav{
+    display: flex;
+    align-items: center;
+   background-color: rgb(26, 30, 30);
+    border-radius: 20px;
+    color: white;
+}
+.navlist nav .links{
+   display: inline-block;
+   margin: 10px;
+   font-size: 19px;
+   font-weight: 700; 
+}
+.navlist .bar{
+    display: none;
+}
+.navlist .sub{
+    display:none;
+}
+.navlist .clickednav{display: none;}
+.navlist2{
+    display: none;
+}
+@media screen and (max-width:760px){
+    .head{
+        display: block;
+    }
+    .head .logo{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+    .head .logo img{
+        width: 80px;
+        height: 80px;
+
+    }
+    .navlist nav .links{
+        display: none;
+        
+    }
+    .navlist .bar{
+        display: block; 
+       margin-left: 8px;
+        font-size: 30px;
+    }
+    .navlist .bar:hover{
+        color: rgb(189, 179, 179);
+        cursor: pointer;
+    }
+    .navlist .clickednav{
+        display: block;
+        margin-left: 40px;
+    }
+    .head .profile img{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: 6px;  
+        margin-right: 8px; 
+    }
+    .navlist{
+        margin-top: 8px;
+        background-color: rgb(26, 30, 30);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+       
+    }
+    .navlist2{
+        z-index: 100;
+        background-color: rgb(26, 30, 30);
+        height: 450px;
+        padding-left: 8px;
+        margin-top: -14px;
+        left: 20px;
+        color: white;
+        margin-left: 8px;
+        padding: 5px;
+        position: absolute;
+        display: block;
+        animation: moveright 1s ease-in-out  1 forwards;
+       display: none;
+       top: 160px;
+       border-radius: 0px 30px 30px 0px;
+    }
+    @keyframes moveright {
+        0%{
+            
+            left: -180px;
+        }
+        100%{
+            left: 8px;
+        }
+    }
+    .navlist2 .links{
+        margin: 5px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .navlist .sub{
+        margin-top: 0px;
+    }
+    .navlist2 .sub p{
+        font-size: 14px;
+        margin: 5px;
+        margin-left: 20px;
+        
+    }
+
+}
+.navlist .links a, .navlist2 .links a , .navlist2 .sub p a{ color: white;}
+.navlist .links a:hover ,.navlist2 .links a:hover, .navlist2 .sub p a:hover{
+    cursor: pointer;
+    color: rgb(175, 173, 173);
+}
+.navlist .links a:hover{
+    border-top: 2px solid rgb(175, 173, 173);
+    border-bottom: 2px solid rgb(175, 173, 173);
+}
+#translation{
+    margin: 5px;
+    height: 30px;
+    position: absolute;
+    right: 8px;
+    top: 0px;
+    z-index: 1;
+}
+.profile-details{
+    display: none;
+    width: 180px;
+    z-index: 100;
+    background-color: rgb(26, 30, 30);
+    height:550px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    text-align: center ;
+    border-radius: 40px;
+    animation: moveleft 1s ease-in-out  1 forwards;
+}
+
+@keyframes moveleft {
+    0%{
+        
+      right: -200px;
+    }
+    100%{
+        right: 10px;
+    }
+}
+.profile-details i{
+    margin-top: 40px;
+    position: relative;
+    left: 50px;
+    font: 20px;
+    color: #fa5e03;
+}
+.profile-details i:hover{
+    color: #c16a37;
+    cursor: pointer;
+}
+@media screen and (min-width:600px){
+    .profile-details{
+        width: 300px;
+    }
+    .profile-details i{
+        left: 120px;
+    }
+    @keyframes moveleft {
+        0%{
+            
+          right: -300px;
+        }
+        100%{
+            right: 10px;
+        }
+    }
+}
+.profile-details figure{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-details figure img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.profile-details p{
+    margin: 5px;
+    font-size: 19px;
+}
+.profile-details .starcontainer{
+    margin-top: 20px;
+}
+.profile-details .star{
+    color: gold;
+    font-size: 25px;
+    margin: 5px;
+    margin-top: 0px;
+}
+.star:nth-last-of-type(2),.star:nth-last-of-type(1){
+    color: rgba(245, 237, 192, 0.487);
+}
+.profile-details .refer{
+    border-radius: 30px;
+    background-color: bisque;
+    padding: 5px;
+    color: black;
+    margin-top: 20px;
+}
+.profile-details .log-out{
+    border-radius: 30px;
+    background-color: rgb(247, 36, 4);
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+    margin-top: 10px;
+}
+

@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, "Times New Roman", Times, sans-serif;
+    
+    text-decoration: none;
+  }
+  body{
+    background: rgb(247, 247, 247);
+    background: linear-gradient(
+      0deg,
+      rgb(251, 30, 218) 0%,
+      rgb(2, 252, 252) 100%
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 5px;
+  }
+
+  .bigContainer {
+    background-image: url(elearning.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    height: 400px;
+    color: white;
+    z-index: -1;
+  }
+  .bigContainer h1{
+    font-size: 38px;
+    font-weight: bold;
+    margin: 3px;
+  }
+  .smallContainer {
+    margin-top: 7px;
+    padding: 5px;
+    display: table;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.406);
+    color: rgb(255, 255, 255);
+    border-radius: 30px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  .smallContainer .row {
+    display: table-row;
+  }
+  .smallContainer .row span {
+    display: table-cell;
+    padding: 7px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .smallContainer a{
+    color: white;
+  }
+  .smallContainer .row a:hover , .smallContainer .row span:hover{
+    color: rgb(227, 215, 215);
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width:500px){
+    .bigContainer{
+        height: 400px;
+    }
+    .bigContainer h1{
+        font-size: 30px;
+    }
+    .smallContainer {
+        padding: 3px;
+    }
+    .smallContainer .row span {
+        padding: 3px;
+        font-size: 16px;
+    }
+    .smallContainer .row:nth-child(2){
+        line-height: 15px;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .bigContainer{
+        height: auto;
+    }
+    .smallContainer{
+        margin-bottom: 8px;
+        margin-top: 6px;
+    }
+    .smallContainer .row{ 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+  }
+  .text-animation{
+    position: relative;
+    padding-left: 6px;
+    padding-right: 6px;
+    animation: show 3s ease-in-out 5s 3 forwards ;
+    z-index: 3;
+    border-radius: 10px;
+  }
+  @keyframes show {
+    0%   {background-color:red;  }
+    25%  {background-color:yellow; }
+    50%  {background-color:blue;}
+    75%  {background-color:green; }
+  }
+  .smallContainer .row:first-of-type span:first-of-type{
+    animation: showtext 2s ease-in-out 8s 3 forwards;
+    border-radius: 60px;
+    
+  }
+  @keyframes showtext {
+    0%{
+      background-color: rgb(244, 244, 92);
+      transform: rotate(10deg);
+      color: black;
+    }
+    25%{
+      background-color: rgb(244, 244, 92);
+      transform: rotate(0deg);
+      color: black;
+    }
+    50%{
+      background-color: rgb(244, 244, 92);
+      transform: rotate(-10deg);
+      color: black;
+    }
+    75%{
+      background-color: rgb(244, 244, 92);
+      transform: rotate(00deg);
+      color: black;
+    }
+  }
+  .updates{
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: rgba(246, 237, 237, 0.412);
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .progress{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    /*background-color: rgba(134, 36, 225, 0.5);*/
+    transform-style: preserve-3d;
+    margin-top: 20px;
+    }
+  .progress h2{
+    padding-left: 30px;
+  }
+  
+  .outer-circle1{
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    transform: translate(-50%,-50%) rotate(15deg) skewY(-15deg) perspective(600px);
+    width: 150px;
+    height: 150px;
+    background-color: rgba(166, 71, 255, 0.748);
+    border-radius: 50%;
+    box-shadow: 30px 30px 0px #ececec11
+                100px 100px 100px #00000011;
+  }
+  .circular-bar1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border: 40px solid transparent;
+    border-right: 25px solid rgb(91, 3, 244);
+    border-radius: 50%;
+  }
+  .inner-circle1{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    bottom: 25px;
+    right: 25px;
+    background-color:#f9f7f7;
+    border-radius: 50%;
+    box-shadow: inset 30px 30px 0px #ececec11
+    inset 100px 100px 100px #00000011;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.65rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.outer-circle2{
+    position: absolute;
+    left:70%;
+    top: 40%;
+    transform: translate(-50%,-50%) rotate(15deg) skewY(-15deg) perspective(600px);
+    width: 150px;
+    height: 150px;
+    background-color: rgba(166, 71, 255, 0.748);
+    border-radius: 50%;
+    box-shadow: 30px 30px 0px #ececec11
+                100px 100px 100px #00000011;
+  }
+  .circular-bar2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    border: 15px solid transparent;
+    border-right: 25px solid rgb(91, 3, 244);
+    border-radius: 50%;
+  }
+  .inner-circle2{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    bottom: 25px;
+    right: 25px;
+    background-color:#f9f7f7;
+    border-radius: 50%;
+    box-shadow: inset 30px 30px 0px #ececec11
+    inset 100px 100px 100px #00000011;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.65rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.progress-caption1, .progress-caption2{
+    position: absolute;
+    top: 70%;
+    font-size: 15px;
+    font-style: oblique;
+    font-weight: 500;
+}
+.progress-caption1{
+    left:10%;
+}
+.progress-caption2{
+    left: 60%;
+}
+@media  screen and (max-width:500px) {
+  .outer-circle1{
+    left: 30%;
+  }
+  .outer-circle2{
+    left: 30%;
+    top: 110%;
+  }
+  .progress-caption2{
+    left: 10%;
+    top: 135%;
+  }
+}
+.student-progress{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.student-progress .images{
+  min-width: 200px;
+  height: 200px;
+  max-width: 400px;
+}
+ .student-progress-main{
+  margin-top: 15px;
+}
+.student-progress-main h2{
+  padding-left: 30px;
+}
+.student-progress-main figure{
+  padding: 10px;
+}
+.student-progress-main figcaption{
+  text-align: center;
+  font-style: italic;
+}
+@media  screen and (max-width:380px) {
+    .student-progress .images{
+        width: 200px;
+        height: 170px;
+    }
+    .outer-circle1{
+        left: 40%;
+        top: 50%;
+      }
+      .progress-caption1{
+        top: 80%;
+      }
+      .outer-circle2{
+        left: 40%;
+        top: 120%;
+      }
+      .progress-caption2{
+        left: 10%;
+        top: 145%;
+      }
+}
+.mentor {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  animation: move1 2s ease-in 3s 1 forwards;
+  z-index: 100;
+}
+.mentor img {
+  width: 60px;
+  height: 60px;
+  animation: move2 2s ease-in 3s 1 forwards;
+  
+ }
+@keyframes move1 {
+  0% {
+    top: 45%;
+    left: 45%;
+  }
+  12% {
+    transform: rotate(30deg);
+  }
+  25%{transform: rotate(0deg);}
+  37%{transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);}
+  100% {
+    bottom: 20px;
+    right: 10px;
+  }
+}
+@keyframes move2{
+  0%{width: 60px;height: 60px;}
+  50%{width: 100px;height: 100px;}
+  75%{width: 60px;height: 60px;}
+  100%{width: 60px;height: 60px;}
+}
+.mentor-caption{
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  font-size: 18px;
+  display: none;
+  color: white;
+  font-weight: 600;
+  background: rgb(246,154,227);
+background: linear-gradient(90deg, rgba(246,154,227,1) 26%, rgba(242,214,127,1) 67%, rgba(240,195,132,1) 100%);
+  padding: 3px;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+}
+.mentor-complete{
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  padding: 8px;
+  width: 300px;
+  height: 415px;
+  border-radius: 20px;
+  background: rgb(246,154,227);
+background: linear-gradient(90deg, rgba(246,154,227,1) 26%, rgba(242,214,127,1) 67%, rgba(240,195,132,1) 100%);
+z-index: 100;
+  display: none;
+}
+
+.question{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 35%;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+.question i{
+  position: relative;
+  top: -120px;
+  right: -105px;
+  font-size: 33px
+}
+.question button{
+  margin-top: 5px;
+  font-size:16px ;
+  height: 30px;
+ background-color: rgb(119, 235, 245);
+ border: none;
+ border-radius: 10px;
+}
+.question button:hover{
+  background-color: rgb(171, 227, 233);
+  cursor: pointer;
+}
+.chatWithMentor{
+  display:none ;
+}
+.display{
+  margin-top: 6px;
+  margin-bottom: 6px;
+  position: relative;
+  width: 280px;
+  height: 320px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.display .date{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.display #date{
+  margin-top: 6px;
+  padding: 5px;
+  background-color: rgb(87, 81, 81);
+  color: rgb(222, 224, 227);
+  border-radius: 30px;
+  font-size: 12px;
+}
+.display #text{
+  position: absolute;
+  bottom: 5px;
+  right: 4px;
+  padding: 5px;
+  background-color: rgb(64, 157, 78);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  font-size:20px;
+  max-width: 250px;
+  max-height: 150px;
+  overflow-y: auto;
+
+
+}
+.profile{
+  display: flex;
+  justify-content: space-around;
+}
+.profile i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+i:hover{cursor: pointer;}
+.chatWithMentor input{
+  width: 230px;
+  height: 26px;
+}
+.chatWithMentor #btn{
+  height: 26px;
+  border-radius: 10px;
+  border: none;
+  background-color: aquamarine;
+  color: rgb(43, 2, 251);
+  font-weight: 600;
+  width: 48px;
+}
+.contactMentor{
+  padding: 20px;
+  display: none;
+
+}
+.contactMentor form{
+  margin-top: 10px;
+}
+.contactMentor i{
+  display: flex;
+  justify-content: end;
+}
+.contactMentor form .button{
+  background-color: aqua;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.contactMentor form .button:hover{
+  background-color: rgb(113, 242, 242);
+  cursor: pointer;
+}
+.notification{
+  margin-top: 10px;
+  color: red;
+  display: none;
+}
+.remove{
+  display: none;
+}

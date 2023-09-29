@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, "Times New Roman", Times, sans-serif;
+    list-style: none;
+    text-decoration: none;
+  }
+  body{
+    background: rgb(67,69,71);
+    background: linear-gradient(90deg, rgba(197,205,205,1) 0%, rgba(93,96,102,1) 47%, rgb(90, 92, 95) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 5px;
+  }
+  .mentor {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    animation: move1 2s ease-in 3s 1 forwards;
+  }
+  .mentor img {
+    width: 60px;
+    height: 60px;
+    animation: move2 2s ease-in 3s 1 forwards;
+    
+   }
+  @keyframes move1 {
+    0% {
+      top: 45%;
+      left: 45%;
+    }
+    12% {
+      transform: rotate(30deg);
+    }
+    25%{transform: rotate(0deg);}
+    37%{transform: rotate(30deg);
+    }
+    50% {
+      transform: rotate(0deg);}
+    100% {
+      bottom: 20px;
+      right: 10px;
+    }
+  }
+  @keyframes move2{
+    0%{width: 60px;height: 60px;}
+    50%{width: 100px;height: 100px;}
+    75%{width: 60px;height: 60px;}
+    100%{width: 60px;height: 60px;}
+  }
+  .mentor-caption{
+    position: fixed;
+  bottom: 80px;
+  right: 15px;
+  font-size: 18px;
+  display: none;
+  color: white;
+  font-weight: 600;
+  background: rgb(246,154,227);
+background: linear-gradient(90deg, rgba(246,154,227,1) 26%, rgba(242,214,127,1) 67%, rgba(240,195,132,1) 100%);
+  padding: 3px;
+  border-radius: 15px;
+  border-bottom-right-radius: 0;
+  }
+  .mentor-complete{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    padding: 8px;
+    width: 300px;
+    height: 415px;
+    border-radius: 20px;
+    background: rgb(246,154,227);
+background: linear-gradient(90deg, rgba(246,154,227,1) 26%, rgba(242,214,127,1) 67%, rgba(240,195,132,1) 100%);
+z-index: 100;
+    display: none;
+  }
+  .question{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 35%;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+   
+  }
+  .question i{
+    position: relative;
+    top: -120px;
+    right: -105px;
+    font-size: 33px
+  }
+  .question button{
+    margin-top: 5px;
+    font-size:16px ;
+    height: 30px;
+   background-color: rgb(119, 235, 245);
+   border: none;
+   border-radius: 10px;
+  }
+  .question button:hover{
+    background-color: rgb(171, 227, 233);
+    cursor: pointer;
+  }
+  .chatWithMentor{
+    display:none ;
+  }
+  .display{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    position: relative;
+    width: 280px;
+    height: 320px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .display .date{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .display #date{
+    margin-top: 6px;
+    padding: 5px;
+    background-color: rgb(87, 81, 81);
+    color: rgb(222, 224, 227);
+    border-radius: 30px;
+    font-size: 12px;
+  }
+  .display #text{
+    position: absolute;
+    bottom: 5px;
+    right: 4px;
+    padding: 5px;
+    background-color: rgb(64, 157, 78);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    font-size:20px;
+    max-width: 250px;
+    max-height: 150px;
+    overflow-y: auto;
+  
+  }
+  .profile{
+    display: flex;
+    justify-content: space-around;
+  }
+  .profile i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  i:hover{cursor: pointer;}
+  .chatWithMentor input{
+    width: 230px;
+    height: 26px;
+  }
+  .chatWithMentor #btn{
+    height: 26px;
+    border-radius: 10px;
+    border: none;
+    background-color: aquamarine;
+    color: rgb(43, 2, 251);
+    font-weight: 600;
+    width: 48px;
+  }
+  .contactMentor{
+    padding: 20px;
+    display: none;
+
+  }
+  .contactMentor form{
+    margin-top: 10px;
+  }
+  .contactMentor i{
+   float: right;
+   margin-right: 4px;
+   margin-top: 10px;
+  }
+  .contactMentor form .button{
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .contactMentor form .button:hover{
+    background-color: rgb(113, 242, 242);
+    cursor: pointer;
+  }
+  .notification{
+    margin-top: 10px;
+    color: red;
+    display: none;
+  }
+  .remove{
+    display: none;
+  }
+  .add{
+    display: block;
+  }
+  @media screen and (min-width: 1000px){
+  .full-container{
+    display: grid;
+    grid-template-columns: 5.5fr 2.5fr;
+  }
+}
+  .lessons-part{
+    width: 360px;
+    padding: 20px;
+    padding-top: 20px;
+    background: rgb(197,205,205);
+    background: linear-gradient(95deg, rgba(197,205,205,1) 0%, rgba(155,161,173,1) 47%, rgba(94,102,102,1) 100%);
+    margin: 20px;
+    border-radius: 20px;
+  }
+  @media screen and (max-width: 420px){
+    .lessons-part{
+      width: auto;
+    }
+  }
+  .lessons-part a{
+    display: block;
+    color: black;
+    text-align: center;
+    border:2px solid rgb(97, 95, 95);
+    margin: 20px;
+    font-size: 20px;
+    padding: 3px;
+    background-color: aliceblue;
+   
+  }
+  .lessons-part a:hover{
+    background-color: rgb(230, 232, 235);
+  }
+  .video-part{
+    padding: 15px;
+    padding-top: 10px;
+  }
+  .video{
+    width: auto;
+    height: auto;
+    margin-right: 10px;
+  }
+  .video-caption{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+  }
+  .video video{
+    
+    height: auto;
+  }
+  @media  screen and (min-width: 1450px) {
+    .video video{
+      width: auto;
+    }
+  }@media  screen and (min-width: 1250px) {
+    .video video{
+      width: 800px;
+    }
+  }
+
+  @media  screen and (max-width: 1250px) {
+    .video video{
+      width: 700px;
+    }
+  }
+  @media  screen and (max-width: 1010px) {
+    .video video{
+      width: 900px;
+    }
+  }
+  @media  screen and (max-width: 910px) {
+    .video video{
+      width: 800px;
+    }
+  }
+
+  @media  screen and (max-width: 810px) {
+    .video video{
+      width: 700px;
+    }
+  }
+  @media  screen and (max-width: 710px) {
+    .video video{
+      width: 600px;
+    }
+  }
+  @media  screen and (max-width: 610px) {
+    .video video{
+      width: 500px;
+    }
+  }
+  @media  screen and (max-width: 510px) {
+    .video video{
+      width: 400px;
+    }
+  }
+  @media  screen and (max-width: 415px) {
+    .video video{
+      width: 340px;
+    }
+   
+  }
+  @media  screen and (max-width: 385px) {
+    .video video{
+      width: 290px;
+    }}
+  @media  screen and (max-width: 300px) {
+    .video video{
+      width: 200px;
+    }
+  }
+  @media  screen and (max-width: 210px) {
+    .video video{
+      width: 100px;
+    }
+  }
+  
+  @media screen and (min-width: 600px){
+    .details{
+    height: 45px;
+    font-size: 22px;
+    padding: 6px;
+    border: 2px solid black;
+    text-decoration: none;
+    border-radius: 20px 20px 20px 20px;
+    background-color: rgb(36, 33, 33);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .bars{
+    display: none;
+  }
+  #navName{
+    display: none;
+  }
+  .pLinks{
+        display: block;
+    }
+  
+}  
+  .details{
+    height:auto;
+    font-size: 22px;
+    padding: 6px;
+    border: 2px solid black;
+    text-decoration: none;
+    border-radius: 20px 20px 20px 20px;
+    background-color: rgb(36, 33, 33);
+    color: white;
+  text-align: center;}
+
+  .fa{
+   float: right;
+   padding: 3px;
+   margin-right: 8px;
+   
+  }
+  .fa:hover{
+    color: black;
+    background-color: white;
+  }
+  @media screen and (max-width: 600px) {
+    .details .pLink{
+   margin: 7px;
+   display: none;
+  }
+  }
+  
+  #navName{
+    text-align: left;
+    margin-left: 8px;
+  }
+  .details a{
+    text-decoration: none;
+cursor: pointer;
+color: white;
+  }
+  .details p a:hover{
+    color: grey;
+
+  }
+  .details p:hover{
+    color: grey;
+  }
+  .details p:active{
+    color: grey;
+    
+  }
+  .navactive{
+    color: grey;
+    
+  }
+
+  @media screen and (min-width:600px) {
+    .details p a:hover{
+      color: grey;
+  border-top: 2px solid rgb(198, 196, 196);
+  border-bottom: 2px solid rgb(198, 196, 196);
+    }
+    .details p:hover{
+      color: white;
+  border-top: 2px solid rgb(198, 196, 196);
+  border-bottom: 2px solid rgb(198, 196, 196);
+    }
+    .details p:active{
+      color: grey;
+      border-top: 2px solid rgb(198, 196, 196);
+      border-bottom: 2px solid rgb(198, 196, 196);
+    }
+    .navactive{
+      color: grey;
+      border-top: 2px solid rgb(198, 196, 196);
+      border-bottom: 2px solid rgb(198, 196, 196);
+    }
+  }
+ 
+  .teacher-details{
+    font-size: 18px;
+    margin-top: 8px;
+    margin-left: 30px;
+    display: none;
+  }
+  @media  screen and (max-width: 600px) {
+    .teacher-details{
+     margin-left: 0;
+    }
+  }
+  .teacher-details table {
+    border: 3px solid black;
+    border-collapse: collapse;
+  }
+  .teacher-details td{
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+  }
+  .teacher-details tr:nth-of-type(1n){
+    background-color: rgb(226, 236, 245);
+  }
+  .teacher-details tr:nth-last-of-type(2n){
+    background-color:rgb(162, 169, 177) ;
+  }
+  .doubt{
+      border: 2px solid black;
+      margin-top: 8px;
+      background: rgb(197,205,205);
+    background: linear-gradient(95deg, rgba(197,205,205,1) 0%, rgba(155,161,173,1) 47%, rgba(94,102,102,1) 100%);
+    padding: 5px;
+    text-align: center;
+    
+  }
+  .doubt .doubts-part{
+   border-radius: 10px;
+   text-align: left;
+   padding: 10px;
+   margin: 10px;
+  }
+  .users {
+    display: flex;
+    justify-items: center;
+   
+  }
+  .users div{
+    padding: 5px;
+  }
+  .users span{
+    font-size: 14px;
+  }
+  .users p{
+    margin-top: 3px;
+    border-radius: 0px 10px 10px 10px;
+    background-color: aliceblue;
+    padding: 8px;
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  .doubt form {
+    margin-top: 5px;
+    margin-bottom: 8px; 
+  }
+  .doubt form #doubt-input{
+    height: 26px;
+    font-size: 17px;
+    border-radius: 7px;
+    border: none; 
+  }
+  @media  screen and (min-width: 1150px) {
+    .doubt form #doubt-input{
+      width: 600px;
+    }
+  }
+  @media  screen and (max-width: 1150px) {
+    .doubt form #doubt-input{
+      width: 400px;
+    }
+  }
+  @media  screen and (max-width: 1000px) {
+    .doubt form #doubt-input{
+      width: 600px;
+    }
+  }
+  @media  screen and (max-width: 760px) {
+    .doubt form #doubt-input{
+      width: 400px;
+    }
+  }
+  @media  screen and (max-width: 560px) {
+    .doubt form #doubt-input{
+      width: auto;
+    }
+  }
+
+  .doubt form #doubt-button{
+    height: 26px;
+    width: 80px;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-top: 8px;
+    border: none;
+
+  }
+  .doubt form #doubt-button:hover{
+    cursor: pointer;
+  }
+  .user-now{
+    display: none;
+  }
+  .feedback{
+    border: 2px solid black;
+    margin-top: 8px;
+    padding: 10px;
+    text-align: center;
+    height: auto;
+    display: none;
+    
+  }
+
+  .feedback .heading{
+    font-size: 27px;
+    font-weight: 700;
+  }
+  
+  .radio-button{
+   width: 30px;
+   font-size: 20px;
+   margin-left: 20px;
+   margin-right: 20px;
+  }
+ @media screen and (max-width: 410px) {
+  .radio-button{
+    display: inline-block;
+    text-align: center;
+   margin-left: 30px;
+   margin-right: 30px;
+  }
+ }
+
+  .feedback h2{
+    margin-top: 30px;
+  }
+  .feedback textarea{
+    width: 600px;
+    height: 100px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+  @media  screen and (min-width: 1150px) {
+    .feedback textarea{
+      width: 600px;
+    }
+  }
+  @media  screen and (max-width: 1150px) {
+    .feedback textarea{
+      width: 500px;
+    }
+  }
+  @media  screen and (max-width: 1000px) {
+    .feedback textarea{
+      width: 600px;
+    }
+  }
+  @media  screen and (max-width: 760px) {
+    .feedback textarea{
+      width: 400px;
+    }
+  }
+  @media  screen and (max-width: 560px) {
+    .feedback textarea{
+      width: auto;
+    }
+  }
+  .feedback-button{
+    width: 80px;
+    height: 27px;
+    font-size: 22px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 7px;
+  } 
+  .feedback-button:hover{
+    cursor: pointer;
+  }
+  .feedbackResult{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 40%;
+    color: rgb(91, 229, 239);
+    display: none;
+    height: 250px;
+  }
+  .feedbackResult h1{
+    color: aqua;
+  }
