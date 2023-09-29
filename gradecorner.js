@@ -34,7 +34,10 @@ function displayMessage(form){
     document.getElementById("timeSpecified").innerHTML = time;
     document.getElementById("notification").style.display="inline-block";
   }
-
+function withdrawing(){
+    document.getElementById("notification").style.display="none";
+    document.getElementById("requesting").style.display = "block";
+  }
   function cancel(){
     document.getElementById("mentor").style.display = "block";
     document.getElementById("question").style.display = "block";
