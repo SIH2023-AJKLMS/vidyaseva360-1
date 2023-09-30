@@ -3,19 +3,6 @@
 
   height: 50px;
 }
-#section{
- 
-    position: fixed;
-    padding: 20px;
-    margin: 5px;
-    width: 1400px;
-    height: 120px;
-    border: 2px solid black;
-    border-radius: 20px;
-    background-color: antiquewhite;
- clear: both;
- display: block;
-}
 
 .logo1{
   width:280px;
@@ -42,13 +29,8 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 
 body {
-  height: 100vh;
-  width: auto;
-  
-  justify-content: center;
-  align-items: center;
   font-family: "Raleway", Arial, sans-serif;
-  background: #d1e6cb;
+  background: #ffffff;
 }
 .container{
   display: flex;
@@ -58,6 +40,14 @@ body {
   margin: 10px;
  
 }
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 h1{
   text-shadow: 0px 5px 10px rgba(19, 17, 15, 0.5);
   text-align: center;
@@ -80,7 +70,7 @@ h1{
   border: 2px solid none;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  background-color: rgb(250, 249, 248);
+  background-color: hsl(252,30%,95%);
 }
 .card {
   position: relative;
@@ -198,8 +188,8 @@ button{
   justify-content: center;
   text-align: center;
   padding: 10px;
-  background-color: #6ed2f4;
-  color: #8f1c1c;
+  background-color:hsl(252,75%,60%);
+  color: white;
   border-radius: 5px;
   border: none;
 }
@@ -281,6 +271,7 @@ button{
 }
 a:link{
   text-decoration: none;
+  color: white;
 }
 
 
