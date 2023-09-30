@@ -4,9 +4,7 @@ body{
      z-index: 1;
   
      }
-.navbar{
-  height: 50px;
-}
+
 .gov{
     display:inline-flex;
     flex-direction: row;  
