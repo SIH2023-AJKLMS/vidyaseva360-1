@@ -6,14 +6,7 @@
     text-decoration: none;
   }
   body{
-    background: rgb(247, 247, 247);
-    background: linear-gradient(
-      0deg,
-      rgb(251, 30, 218) 0%,
-      rgb(2, 252, 252) 100%
-    );
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: rgb(247, 235, 248);
     padding: 5px;
   }
 
@@ -140,9 +133,10 @@
     padding: 20px;
     border-radius: 15px;
     font-size: 18px;
-    background-color: rgba(246, 237, 237, 0.412);
+   background: rgb(232, 222, 234);
     margin-left: 30px;
     margin-right: 30px;
+    box-shadow: 4px 4px 4px 4px grey;
     list-style-type: disc;
   }
 .updates li{
@@ -275,6 +269,7 @@
   min-width: 200px;
   height: 200px;
   max-width: 400px;
+  box-shadow: 4px 4px 4px 4px grey;
 }
  .student-progress-main{
   margin-top: 15px;
