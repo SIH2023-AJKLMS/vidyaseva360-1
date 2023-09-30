@@ -230,8 +230,8 @@ li{
 }
 
 .roadmap{
-  width: auto;
-  height: auto;
+  width: 1300px;
+  height: 1300px;
   gap: 2rem;
   padding: 40px;
   margin: 30px;
