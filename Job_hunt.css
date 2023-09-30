@@ -1,0 +1,182 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(318deg, rgba(251, 30, 218, 0.409) 0%, rgba(2, 252, 252, 0.516) 100%);
+     z-index: 1;
+  
+     }
+.navbar{
+  height: 50px;
+}
+.gov{
+    display:inline-flex;
+    flex-direction: row;  
+    justify-content: center; 
+    align-items: center;
+}
+.kerala{
+    padding-left: 10;
+    font-size: 20;
+}
+.heading{
+    text-transform: uppercase;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.715);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.365),rgba(0, 0, 0, 0.7)),url(./main\ image.jpg);
+    border-radius: 5px;
+    margin: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 2px solid black;
+    font-size: larger;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+ 
+.learn{
+    font-size: 8;
+    background-color: rgb(25, 26, 26);
+    max-width: 70px;
+    color:white;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    border-radius: 2px;
+    padding: 4px;
+    max-height:100px;
+    box-sizing: border-box;
+}
+#scholorship{
+    display: flex;
+    padding-top: 10;
+    margin-top: 19;
+}
+
+.slp{
+    padding-top: 5;
+    padding-left: 6;
+    font-size: 29;
+}
+.container {
+ display: flex;
+ justify-content: center;
+  align-items: center;
+  gap: 2rem
+}
+
+.pricing-plan {
+  flex: 1;
+ max-width: 400px;
+ padding: 20px;
+ border: 2px solid rgba(47, 87, 99, 0.158) ;
+ border-radius: 5px;
+ text-align: center;
+ background-color: #ffffff3f;
+}
+
+.plan-title {
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 10px;
+}
+
+.plan-price {
+ font-size: 40px;
+ font-weight: bold;
+ margin-bottom: 10px;
+ color: rgba(0, 0, 0, 0.806);
+}
+
+.plan-features {
+  list-style: none;
+ padding: 0;
+  margin: 0;
+}
+
+.plan-features {
+  margin-bottom: 20px;
+}
+
+.plan-button {
+ padding: 10px;
+ background-color: #ff6600;
+ color: #fff;
+ border-radius: 5px;
+ border: none;
+}
+
+
+#loan{
+  display: flex;
+  padding-top: 10;
+}
+.loan{
+    padding-top: 11;
+    padding-left: 6;
+    font-size: 29;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+.num{
+  text-align: center;
+  padding-top: 50;
+  font-size: 40;
+}
+.nums{
+  font-size: medium;
+  padding-top: 10;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+@media (max-width: 1000px) and (min-width:400px) {
+  .container {
+     flex-direction: column;
+    }
+}
+@media screen and (max-width:400px){
+    .container{
+        flex-direction: column;
+    }
+    .plan-price{
+        font-size: 26px;
+    }
+    .plan-features{
+        font-size: 12;
+    }
+    .plan-button{
+        font-size: 10;
+    }
+    .heading{
+      font-size: medium;
+    }
+    .slp{
+      font-size: 22;
+    }
+    #loan{
+      font-size: 22;
+    }
+    .num{
+      font-size: 22;
+    }
+    .nums{
+      gap: 2rem;
+      font-size: 15;
+    }
+   
+}
+footer{
+  margin-top: 40;
+  height: 200;
+  background-color: rgba(245, 250, 255, 0.274);
+  margin: 10;
+  margin-bottom: 0;
+  margin-top: 30;
+  border-radius: 8px;
+  text-align: center;
+}
