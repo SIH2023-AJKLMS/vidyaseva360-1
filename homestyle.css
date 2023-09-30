@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.home-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-info{
+    font-size: 4.3rem;
+    margin-left: 6rem;
+    font-weight: 150;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.home-img{
+    margin-right: 9rem;
+}
+
+.notice-section{
+    height: 50px;
+    /* width: 96vw; */
+    margin-left: 1.8rem;
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 10rem;
+    box-shadow: 3px 3px rgb(178, 178, 178), -0.5em 0 .8em rgb(102, 102, 102);
+    margin-bottom: 10rem;
+}
+.notice-section h1{
+    font-size: 40px;
+}
+.notice-section li{
+    font-size: 25px;
+}
+.notice-section li:first-of-type{
+    color: red;
+}
+.notice-section li:last-of-type{
+    color: blue;
+}
