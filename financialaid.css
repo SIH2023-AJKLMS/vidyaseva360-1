@@ -1,12 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(318deg, rgba(251, 30, 218, 0.409) 0%, rgba(2, 252, 252, 0.516) 100%);
-     z-index: 1;
-  
+    background-color: white;
      }
-.navbar{
-  height: 50px;
-}
 .gov{
     display:inline-flex;
     flex-direction: row;  
@@ -21,7 +16,7 @@ body{
     text-transform: uppercase;
     text-align: center;
     color: rgba(255, 255, 255, 0.715);
-    background-image:linear-gradient(rgba(0, 0, 0, 0.365),rgba(0, 0, 0, 0.7)),url(./main\ image.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.365),rgba(0, 0, 0, 0.7)),url(scholarshipimage.jpg);
     border-radius: 5px;
     margin: auto;
     padding-top: 8px;
@@ -35,7 +30,7 @@ body{
  
 .learn{
     font-size: 8;
-    background-color: rgb(25, 26, 26);
+    color: hsl(252,75%,60%);
     max-width: 70px;
     color:white;
     text-align: center;
@@ -99,7 +94,7 @@ body{
 
 .plan-button {
  padding: 10px;
- background-color: #ff6600;
+ color: hsl(252,75%,60%);
  color: #fff;
  border-radius: 5px;
  border: none;
